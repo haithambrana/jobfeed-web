@@ -1,0 +1,15 @@
+services:
+  jobfeed:
+    build:
+      context: ../
+      dockerfile: jobfeed-web/Dockerfile
+    container_name: jobfeed
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    # Schedule a daily fetch inside the container (override CMD):
+    command: >
+      sh -c "python -m jobfeed.cli fetch
+      && python app.py"
+    environment:
+      - JOBFEED_PATH=/app/jobfeed
