@@ -1,7 +1,8 @@
 # JobFeed Web — remote job search demo
 
-A searchable web frontend over the [jobfeed](../jobfeed) aggregator database. Live demo of
-"data extraction → clean UI" — exactly the kind of deliverable clients pay for.
+A searchable web frontend over the [jobfeed](https://github.com/haithambrana/jobfeed)
+aggregator database. Live demo of "data extraction → clean UI" — exactly the kind of deliverable
+clients pay for.
 
 Two modes:
 1. **Flask app (live DB)**: `python app.py` → serves a search UI + `/api/jobs?q=...` backed by the
